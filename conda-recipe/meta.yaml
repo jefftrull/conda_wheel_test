@@ -1,0 +1,18 @@
+package:
+  name: mymod
+  version: 0.9
+
+source:
+  path: ..
+
+requirements:
+  build:
+    - {{ compiler('cxx') }}
+    - cmake>=3.13
+    - wheel
+
+  host:
+    - boost!=1.70
+
+outputs:
+  - type: wheel
